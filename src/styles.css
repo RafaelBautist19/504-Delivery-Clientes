@@ -1,0 +1,83 @@
+:root{
+    /*Colores*/
+
+    --honduran-blue: #3B4FBF;
+    --soft-honduran-blue: #5a6fe9;
+    --soft-blue-transparency: #5a6fe9ab;
+    --skyblue: #5A9de9;
+    --soft-skyblue: #7fabdd;
+    --soft-white: #f5f5f5;
+    --just-white: white;
+    --black: black;
+
+}
+
+body{
+    font-family: 'Ruda', sans-serif;
+    background-color: var(--soft-white);
+}
+
+.navbar{
+    background-color: var(--honduran-blue);
+}
+
+#row-header{
+    background-color: var(--soft-white);
+}
+
+#div-100Confiable h1{
+    color: var(--soft-honduran-blue);
+}
+
+.img-cards{
+    height: 250px;
+}
+
+
+#header img{
+    width: 60%;
+    height: 350px;
+}
+
+#header{
+    background-color: var(--skyblue);
+}
+
+.trabajo-section{
+    height: 20vh;
+    width: 100%;
+    background-image: url('./assets/images/logos/trabajo.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#trabajo{
+    background-color: var(--soft-blue-transparency);
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+    #header img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+    #header img{
+        width: 80%;
+        height: 300px;
+    }
+}
+
+footer{
+    background-color: var(--honduran-blue);
+}
+
+footer li{
+    text-decoration: none;
+    list-style: none;
+}
+
