@@ -1,1 +1,56 @@
-<p>main works!</p>
+<nav class="navbar navbar-expand-lg navbar-dark" id="navbar-app"> 
+    <div class="text-center" style="margin: 0 auto;">
+        <img src="../../../assets/images/logos/Logo-Outline-White.png" style="width: 13%;" alt="">
+        <a class="navbar-brand" href="#"><b>504 Delivery</b></a>
+    </div>
+</nav>
+
+<main class="container my-3">
+    <div class="row">
+        <div class="col-6 my-2">
+            <div class="card">
+                <img src="../../../assets/images/restaurantes/KFC-logo.png" class="card-img-top mt-3" alt="...">
+                <div class="card-body text-center">
+                  <h5 class="card-title">KFC</h5>
+                  <a href="#" class="btn btn-primary">Ver Menú</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-6 my-2">
+            <div class="card">
+                <img src="../../../assets/images/restaurantes/Logo-Burger-King.png" class="card-img-top mt-3" alt="...">
+                <div class="card-body text-center">
+                  <h5 class="card-title ">Burger King</h5>
+                  <a href="#" class="btn btn-primary">Ver Menú</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-6 my-2">
+            <div class="card">
+                <img src="../../../assets/images/restaurantes/Pizza_Hut_logo.png" class="card-img-top mt-3" alt="...">
+                <div class="card-body text-center">
+                  <h5 class="card-title ">Pizza Hut</h5>
+                  <a href="#" class="btn btn-primary">Ver Menú</a>
+                </div>
+              </div>
+        </div>
+        <div class="col-6 my-2">
+            <div class="card">
+                <img src="../../../assets/images/restaurantes/little-caesars-vector-logo.png" class="card-img-top mt-3" alt="...">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Little Caesar</h5>
+                  <a href="#" class="btn btn-primary">Ver Menú</a>
+                </div>
+              </div>
+        </div>
+    </div>
+</main>
+
+<footer class="fixed-bottom">
+    <div class="row text-center" id="footbar">
+        <div class="col-3" style="padding-right: 0px;"><a routerLink='home'><fa-icon [icon]="faHome"></fa-icon></a></div>
+        <div class="col-3"><a routerLink='carrito'><fa-icon [icon]="faShoppingBag"></fa-icon></a></div>
+        <div class="col-3"><a routerLink='pedidos'><fa-icon [icon]="faShoppingCart"></fa-icon></a></div>
+        <div class="col-3" style="padding-left: 0px;"><a routerLink='perfil'><fa-icon [icon]="faUser"></fa-icon></a></div>
+    </div>
+</footer>

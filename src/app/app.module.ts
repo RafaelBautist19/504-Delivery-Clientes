@@ -9,6 +9,8 @@ import { SignupComponent } from './components/signup/signup.component';
 import { MainComponent } from './components/main/main.component';
 import { LandingComponent } from './components/landing/landing.component';
 import { AppRoutingModule } from './app-routing.module';
+import { FootbarComponent } from './components/footbar/footbar.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 // const router: Routes = [
 //   {
@@ -24,7 +26,9 @@ import { AppRoutingModule } from './app-routing.module';
     LoginComponent,
     SignupComponent,
     MainComponent,
-    LandingComponent
+    LandingComponent,
+    FootbarComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
