@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {faHome, faShoppingCart, faShoppingBag, faUser} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-footbar',
@@ -6,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footbar.component.css']
 })
 export class FootbarComponent implements OnInit {
+
+  faHome = faHome;
+  faShoppingCart = faShoppingCart;
+  faShoppingBag = faShoppingBag;
+  faUser = faUser
 
   constructor() { }
 
