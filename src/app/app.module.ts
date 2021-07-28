@@ -14,6 +14,10 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { CarritoComponent } from './components/carrito/carrito.component';
 import { PedidosComponent } from './components/pedidos/pedidos.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
+import { MenuRestauranteComponent } from './components/menu-restaurante/menu-restaurante.component';
+import { InformacionProductoComponent } from './components/informacion-producto/informacion-producto.component';
+import { DireccionEntregaComponent } from './components/direccion-entrega/direccion-entrega.component';
+import { MetodoPagoComponent } from './components/metodo-pago/metodo-pago.component';
 
 // const router: Routes = [
 //   {
@@ -34,7 +38,11 @@ import { PerfilComponent } from './components/perfil/perfil.component';
     NavbarComponent,
     CarritoComponent,
     PedidosComponent,
-    PerfilComponent
+    PerfilComponent,
+    MenuRestauranteComponent,
+    InformacionProductoComponent,
+    DireccionEntregaComponent,
+    MetodoPagoComponent
   ],
   imports: [
     BrowserModule,
