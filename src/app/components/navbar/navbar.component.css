@@ -2,7 +2,8 @@
     background-color: #5A6FE9;
 }
 
-.navbar-brand{
-    font-size: 1.5rem;
-    margin-left: 5px;
+.btn-link{
+    color: white;
+    text-decoration: none;
+    font-size: 1.4rem;
 }

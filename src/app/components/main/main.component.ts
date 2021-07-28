@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {faHome, faShoppingCart, faShoppingBag, faUser} from '@fortawesome/free-solid-svg-icons';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-main',
@@ -13,9 +14,10 @@ export class MainComponent implements OnInit {
   faShoppingBag = faShoppingBag;
   faUser = faUser
 
-  constructor() { }
+  constructor(private title:Title) { }
 
   ngOnInit(): void {
+    this.title.setTitle('504 Delivery - Pagina Principal');
   }
 
 }

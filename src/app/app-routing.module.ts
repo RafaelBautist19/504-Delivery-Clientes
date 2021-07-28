@@ -8,6 +8,8 @@ import { MainComponent } from './components/main/main.component';
 import { CarritoComponent } from './components/carrito/carrito.component';
 import { PedidosComponent } from './components/pedidos/pedidos.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
+import { MenuRestauranteComponent } from './components/menu-restaurante/menu-restaurante.component';
+import { InformacionProductoComponent } from './components/informacion-producto/informacion-producto.component';
 
 const routes: Routes = [
   { path:'', component: LandingComponent},
@@ -16,7 +18,9 @@ const routes: Routes = [
   { path:'home', component: MainComponent},
   { path:'carrito', component:CarritoComponent},
   { path:'pedidos', component:PedidosComponent},
-  { path:'perfil', component:PerfilComponent}
+  { path:'perfil', component:PerfilComponent},
+  { path:'home/id', component:MenuRestauranteComponent},
+  { path: 'home/id/infoproducto/id', component:InformacionProductoComponent}
 ]
 
 
