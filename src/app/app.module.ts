@@ -18,6 +18,7 @@ import { MenuRestauranteComponent } from './components/menu-restaurante/menu-res
 import { InformacionProductoComponent } from './components/informacion-producto/informacion-producto.component';
 import { DireccionEntregaComponent } from './components/direccion-entrega/direccion-entrega.component';
 import { MetodoPagoComponent } from './components/metodo-pago/metodo-pago.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 // const router: Routes = [
 //   {
@@ -49,6 +50,7 @@ import { MetodoPagoComponent } from './components/metodo-pago/metodo-pago.compon
     NgbModule,
     FontAwesomeModule,
     AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
