@@ -10,6 +10,7 @@ import { PedidosComponent } from './components/pedidos/pedidos.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { MenuRestauranteComponent } from './components/menu-restaurante/menu-restaurante.component';
 import { InformacionProductoComponent } from './components/informacion-producto/informacion-producto.component';
+import { DireccionEntregaComponent } from './components/direccion-entrega/direccion-entrega.component';
 
 const routes: Routes = [
   { path:'', component: LandingComponent},
@@ -20,7 +21,8 @@ const routes: Routes = [
   { path:'pedidos', component:PedidosComponent},
   { path:'perfil', component:PerfilComponent},
   { path:'home/id', component:MenuRestauranteComponent},
-  { path: 'home/id/infoproducto/id', component:InformacionProductoComponent}
+  { path: 'home/id/infoproducto/id', component:InformacionProductoComponent},
+  { path: 'carrito/id/direccion-entrega', component: DireccionEntregaComponent}
 ]
 
 

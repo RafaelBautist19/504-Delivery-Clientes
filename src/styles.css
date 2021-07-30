@@ -81,3 +81,12 @@ footer li{
     list-style: none;
 }
 
+.btn{
+    background-color: #5A6FE9;
+    border-color: #5a6fe9;
+}
+
+a{
+    text-decoration: none;
+    color: #5A6FE9;
+}
