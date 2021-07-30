@@ -1,3 +1,26 @@
 <app-navbar></app-navbar>
 
-<main></main>
+<main class="container my-3">
+    <div class="card">
+        <div class="row no-gutters">
+            <div class="col-5">
+                <img src="../../../assets/images/restaurantes/KFC-logo.png" class="img-fluid my-2" alt="">
+            </div>
+            <div class="col-7">
+                <h5 class="mt-2">Combo Coronel Burger</h5>
+                <p class="mb-0">Hamburguesa Coronel Burger, acompañada con Papás Fritas y Pepsi de 900 ml.</p>
+                <div class="text-right mt-3">
+                    <span class="mr-3">Precio: L. 130.00</span>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <form class="mx-3 my-4" [formGroup]="agregarProductoCarrito">
+        <label for="">Cantidad:</label>
+        <input type="number" min="1" class="form-control" style="width: 40%;">
+    </form>
+    <div class="text-center">
+        <button class="btn btn-primary" style="margin: 0 auto;">Añadir Producto</button>
+    </div>
+</main>
