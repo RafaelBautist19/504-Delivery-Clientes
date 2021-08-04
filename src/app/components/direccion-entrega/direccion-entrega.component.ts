@@ -10,7 +10,20 @@ import { Loader } from '@googlemaps/js-api-loader';
 
 
 export class DireccionEntregaComponent implements OnInit {
+  lat:number = 0;
+  lng:number = 0;
 
+  
+  getClientLocation(){
+    if(navigator.geolocation){
+      navigator.geolocation.getCurrentPosition(position=>{
+        this.lat = position.coords.latitude;
+        this.lng = position.coords.longitude
+        console.log(this.lat);
+        console.log(this.lng);
+      })
+    }
+  }
 
   title = 'google-maps';
 
@@ -25,7 +38,7 @@ export class DireccionEntregaComponent implements OnInit {
 
     loader.load().then(() => {
 
-      const location = { lat: parseFloat(this.lat), lng: 	parseFloat(this.lng) }
+      var location = { lat: this.lat, lng: this.lng }
 
       this.map = new google.maps.Map(document.getElementById("map")!, {
         center: location,
@@ -35,20 +48,11 @@ export class DireccionEntregaComponent implements OnInit {
       const marker = new google.maps.Marker({
         position: location,
         map: this.map,
+        draggable: true,
+        title: `${location}`
       });
     })
   }
 
-  lat:any;
-  lng:any;
-
-  getClientLocation(){
-    if(navigator.geolocation){
-      navigator.geolocation.getCurrentPosition(position=>{
-        this.lat = position.coords.latitude;
-        this.lng = position.coords.longitude
-      })
-    }
-  }
 
 }
