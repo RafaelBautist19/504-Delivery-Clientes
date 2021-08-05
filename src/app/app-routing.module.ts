@@ -23,7 +23,7 @@ const routes: Routes = [
   { path:'perfil', component:PerfilComponent},
   { path:'home/id', component:MenuRestauranteComponent},
   { path: 'home/id/infoproducto/id', component:InformacionProductoComponent},
-  { path: 'carrito/id/direccion-entrega', component: DireccionEntregaComponent}
+  { path: 'carrito/realizar-pedido', component: DireccionEntregaComponent}
 ]
 
 

@@ -17,7 +17,6 @@ export class MetodoPagoComponent implements OnInit {
 
   metodoPagoSeleccionado(){
     this.verMetodoSeleccionado = this.opcionSeleccionada;
-    console.log(this.verMetodoSeleccionado);
   }
 
 }
