@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MetodoPagoComponent implements OnInit {
 
+  opcionSeleccionada:string = '';
+  verMetodoSeleccionado:string = '';
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  metodoPagoSeleccionado(){
+    this.verMetodoSeleccionado = this.opcionSeleccionada;
+    console.log(this.verMetodoSeleccionado);
   }
 
 }

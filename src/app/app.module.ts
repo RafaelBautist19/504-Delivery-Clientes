@@ -19,6 +19,7 @@ import { InformacionProductoComponent } from './components/informacion-producto/
 import { DireccionEntregaComponent } from './components/direccion-entrega/direccion-entrega.component';
 import { MetodoPagoComponent } from './components/metodo-pago/metodo-pago.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 // const router: Routes = [
 //   {
@@ -50,7 +51,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     NgbModule,
     FontAwesomeModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
