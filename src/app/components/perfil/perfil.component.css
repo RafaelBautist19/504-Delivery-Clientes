@@ -1,10 +1,20 @@
 .profile-list-item{
     border-bottom: 1px solid rgba(189, 185, 185, 0.616);
     border-top: 1px solid rgba(189, 185, 185, 0.616);
-    height: 50px;
 }
 
-.profile-list-item h5{
+.profile-list-item h5,h6{
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.atencion-cliente{
+    margin-top: 5px;
+    border: 1px solid rgba(189, 185, 185, 0.616);
+    background-color: rgba(219, 217, 217, 0.411);
+}
+
+.atencion-cliente h5{
     margin-top: 10px;
     margin-left: 5px;
 }
