@@ -20,6 +20,7 @@ import { DireccionEntregaComponent } from './components/direccion-entrega/direcc
 import { MetodoPagoComponent } from './components/metodo-pago/metodo-pago.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
+import { DetallePedidoComponent } from './components/detalle-pedido/detalle-pedido.component';
 
 // const router: Routes = [
 //   {
@@ -44,7 +45,8 @@ import { FormsModule } from '@angular/forms';
     MenuRestauranteComponent,
     InformacionProductoComponent,
     DireccionEntregaComponent,
-    MetodoPagoComponent
+    MetodoPagoComponent,
+    DetallePedidoComponent
   ],
   imports: [
     BrowserModule,

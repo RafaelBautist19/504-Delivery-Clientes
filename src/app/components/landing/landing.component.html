@@ -2,20 +2,18 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Eighth  navbar example">
     <div class="container">
-      <img src="./assets/images/logos/Logo-Outline-White.png" alt="" width="50" height="44" style="display: inline-block;vertical-align: text-bottom;">
-      <a class="navbar-brand" href="#"><b>504 Delivery</b></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"  data-bs-target="#dropdownLanding" aria-controls="navbarsExample07" aria-expanded="false"  aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="dropdownLanding">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" ><b>Iniciar Sesión</b></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" routerLink='/signup' tabindex="-1" aria-disabled="true"><b>Registrate</b></a>
-          </li>
-        </ul>
+      <div>
+        <img src="./assets/images/logos/Logo-Outline-White.png" alt="" width="50" height="42" style="display: inline-block;vertical-align: text-center;">
+        <a class="navbar-brand"><b>504 Delivery</b></a>
+      </div>
+      <div>
+        <div class="nav-item" ngbDropdown>
+          <a class="nav-link" tabindex="0" ngbDropdownToggle id="navbarDropdown2" role="button" style="color: white;"></a>
+          <div ngbDropdownMenu aria-labelledby="navbarDropdown2" class="dropdown-menu dropdown-menu-right">
+            <a ngbDropdownItem routerLink="/login" (click)="$event.preventDefault()">Iniciar Sesion</a>
+            <a ngbDropdownItem routerLink="/signup" (click)="$event.preventDefault()">Registrarse</a>
+          </div>
+        </div>
       </div>
     </div>
   </nav>
@@ -69,7 +67,7 @@
             <div class="card-body">
               <h5 class="card-title">Rafael Bautista</h5>
               <p class="card-text">Atención al Cliente</p>
-              <button id="btn-atencion-cliente-1" class="btn btn-outline-success">Contactar <i class="fab fa-whatsapp"></i></button>
+              <button id="btn-atencion-cliente-1" class="btn text-white">Contactar <i class="fab fa-whatsapp"></i></button>
             </div>
           </div>
         </div>
@@ -78,7 +76,7 @@
             <div class="card-body">
               <h5 class="card-title">Yuvini Flores</h5>
               <p class="card-text">Atención al Cliente</p>
-              <button id="btn-atencion-cliente-2" class="btn btn-outline-success">Contactar <i class="fab fa-whatsapp"></i></button>
+              <button id="btn-atencion-cliente-2" class="btn text-white">Contactar <i class="fab fa-whatsapp"></i></button>
             </div>
           </div>
         </div>
@@ -87,9 +85,9 @@
   </section>
   <section class="trabajo-section my-3">
     <div class="row" id="trabajo">
-      <div class="col-12 my-0 my-sm-3 my-lg-3 my-md-3 text-center text-white">
+      <div class="col-12 my-2 my-sm-3 my-lg-3 my-md-3 text-center text-white">
         <h4 class="">¿Deseas unirte a nuestro equipo de repartidores?</h4>
-        <a href="../Frontend Motoristas/index.html" class="btn btn-primary">Registrate ahora</a>
+        <a href="http://localhost:4050/" class="btn btn-primary">Registrate ahora</a>
       </div>
     </div>
   </section>

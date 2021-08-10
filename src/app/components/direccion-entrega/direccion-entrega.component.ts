@@ -25,8 +25,6 @@ export class DireccionEntregaComponent implements OnInit {
     }
   }
 
-  title = 'google-maps';
-
   private map!: google.maps.Map;
 
   ngOnInit(): void {
