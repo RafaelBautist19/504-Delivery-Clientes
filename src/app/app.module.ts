@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -21,13 +22,9 @@ import { MetodoPagoComponent } from './components/metodo-pago/metodo-pago.compon
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { DetallePedidoComponent } from './components/detalle-pedido/detalle-pedido.component';
+import { AuthGuard } from './auth.guard';
+import { TokenInterceptorService } from './services/token-interceptor.service';
 
-// const router: Routes = [
-//   {
-//     path: 'signup',
-//     component: SignUpComponent
-//   }
-// ]
 
 
 @NgModule({
@@ -54,9 +51,10 @@ import { DetallePedidoComponent } from './components/detalle-pedido/detalle-pedi
     FontAwesomeModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AuthGuard,{provide:HTTP_INTERCEPTORS, useClass: TokenInterceptorService, multi:true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

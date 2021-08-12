@@ -9,9 +9,9 @@
                 </div>
                 <form class="my-3">
                     <label class="my-2" style="margin-left: 10%;">Correo Electrónico:</label>
-                    <input type="text" class="form-control" style="width: 80%; margin: 0 auto;">
+                    <input type="text" name="correo" [(ngModel)]="cliente.correo" class="form-control" style="width: 80%; margin: 0 auto;">
                     <label class="my-2" style="margin-left: 10%;">Contraseña:</label>
-                    <input type="password" class="form-control" style="width: 80%; margin: 0 auto;">
+                    <input type="password" name="password" [(ngModel)]="cliente.password" class="form-control" style="width: 80%; margin: 0 auto;">
                 </form>
                 <span style="margin: 0 auto; font-size: 0.8rem;">¿Aun no tienes una cuenta? <a routerLink='/signup'>Registrate!</a></span>
                 <button class="btn btn-primary my-4" (click)="iniciarSesion()" style="width: 80%; margin: 0 auto;">Iniciar Sesión</button>

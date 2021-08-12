@@ -11,19 +11,19 @@ import { PerfilComponent } from './components/perfil/perfil.component';
 import { MenuRestauranteComponent } from './components/menu-restaurante/menu-restaurante.component';
 import { InformacionProductoComponent } from './components/informacion-producto/informacion-producto.component';
 import { DireccionEntregaComponent } from './components/direccion-entrega/direccion-entrega.component';
-import { MetodoPagoComponent } from './components/metodo-pago/metodo-pago.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   { path:'', component: LandingComponent},
   { path:'login', component: LoginComponent},
   { path:'signup', component: SignupComponent},
-  { path:'home', component: MainComponent},
-  { path:'carrito', component:CarritoComponent},
-  { path:'pedidos', component:PedidosComponent},
-  { path:'perfil', component:PerfilComponent},
-  { path:'home/id', component:MenuRestauranteComponent},
-  { path: 'home/id/infoproducto/id', component:InformacionProductoComponent},
-  { path: 'carrito/realizar-pedido', component: DireccionEntregaComponent}
+  { path:'home', component: MainComponent, canActivate:[AuthGuard]},
+  { path:'carrito', component:CarritoComponent, canActivate:[AuthGuard]},
+  { path:'pedidos', component:PedidosComponent, canActivate:[AuthGuard]},
+  { path:'perfil', component:PerfilComponent, canActivate:[AuthGuard]},
+  { path:'home/id', component:MenuRestauranteComponent, canActivate:[AuthGuard]},
+  { path: 'home/id/infoproducto/id', component:InformacionProductoComponent, canActivate:[AuthGuard]},
+  { path: 'carrito/realizar-pedido', component: DireccionEntregaComponent, canActivate:[AuthGuard]}
 ]
 
 
