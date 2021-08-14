@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'src/app/services/auth.service';
+import { ClientesService } from 'src/app/services/clientes.service';
 
 @Component({
   selector: 'app-perfil',
@@ -8,7 +8,7 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class PerfilComponent implements OnInit {
 
-  constructor(public authService:AuthService) { }
+  constructor(public clientesService:ClientesService) { }
 
   ngOnInit(): void {
   }

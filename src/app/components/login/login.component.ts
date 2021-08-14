@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
-import { AuthService } from '../../services/auth.service';
+import { ClientesService } from '../../services/clientes.service';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
 
   cliente={correo:this.correo,password:this.password};
 
-  constructor(private title:Title, private authService: AuthService, private router: Router) { }
+  constructor(private title:Title, private clientesService: ClientesService, private router: Router) { }
 
   ngOnInit(): void {
     this.title.setTitle('504 Delivery - Login');
@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
 
   iniciarSesion(){
 
-   this.authService.login(this.cliente).subscribe(
+   this.clientesService.login(this.cliente).subscribe(
      res=>{
        localStorage.setItem('token', res.token);
        localStorage.setItem('clientID', res.clientID);
