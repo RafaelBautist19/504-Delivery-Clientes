@@ -21,8 +21,8 @@ const routes: Routes = [
   { path:'carrito', component:CarritoComponent, canActivate:[AuthGuard]},
   { path:'pedidos', component:PedidosComponent, canActivate:[AuthGuard]},
   { path:'perfil', component:PerfilComponent, canActivate:[AuthGuard]},
-  { path:'home/id', component:MenuRestauranteComponent, canActivate:[AuthGuard]},
-  { path: 'home/id/infoproducto/id', component:InformacionProductoComponent, canActivate:[AuthGuard]},
+  { path:'home/:idRestaurante', component:MenuRestauranteComponent, canActivate:[AuthGuard]},
+  { path: 'home/:idRestaurante/infoproducto/:idProducto', component:InformacionProductoComponent, canActivate:[AuthGuard]},
   { path: 'carrito/realizar-pedido', component: DireccionEntregaComponent, canActivate:[AuthGuard]}
 ]
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {faHome, faShoppingCart, faShoppingBag, faUser} from '@fortawesome/free-solid-svg-icons';
 import { Title } from '@angular/platform-browser';
+import { RestaurantesService } from 'src/app/services/restaurantes.service';
 
 @Component({
   selector: 'app-main',
@@ -14,10 +15,21 @@ export class MainComponent implements OnInit {
   faShoppingBag = faShoppingBag;
   faUser = faUser
 
-  constructor(private title:Title) { }
+  restaurantes:any=[];
+
+  constructor(private title:Title, private restaurantesService:RestaurantesService) { }
 
   ngOnInit(): void {
     this.title.setTitle('504 Delivery - Pagina Principal');
+
+    this.restaurantesService.obtenerRestaurantes().subscribe(
+      res=>{
+        this.restaurantes = res;
+      },
+      error=>{
+        console.log(error);
+      }
+    )
   }
 
 }

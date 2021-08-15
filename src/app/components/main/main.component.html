@@ -8,16 +8,16 @@
 
 <main class="container mt-3 mb-5">
     <div class="row">
-        <div class="col-6 my-2">
+        <div class="col-6 my-2" *ngFor="let restaurante of restaurantes">
             <div class="card">
-                <img src="../../../assets/images/restaurantes/KFC-logo.png" class="card-img-top mt-3" alt="...">
+                <img src="../../../assets/images/{{restaurante.icono}}" class="card-img-top mt-3" alt="...">
                 <div class="card-body text-center">
-                  <h5 class="card-title">KFC</h5>
-                  <a routerLink='id' class="btn btn-primary">Ver Menú</a>
+                  <h5 class="card-title">{{restaurante.nombreRestaurante}}</h5>
+                  <a routerLink='{{restaurante._id}}' class="btn btn-primary">Ver Menú</a>
                 </div>
             </div>
         </div>
-        <div class="col-6 my-2">
+        <!-- <div class="col-6 my-2">
             <div class="card">
                 <img src="../../../assets/images/restaurantes/Logo-Burger-King.png" class="card-img-top mt-3" alt="...">
                 <div class="card-body text-center">
@@ -79,7 +79,7 @@
                   <a href="#" class="btn btn-primary">Ver Menú</a>
                 </div>
               </div>
-        </div>
+        </div> -->
     </div>
 </main>
 
