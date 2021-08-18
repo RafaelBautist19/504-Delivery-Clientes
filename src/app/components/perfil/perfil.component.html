@@ -1,15 +1,15 @@
-<main class="container my-3 py-2">
+<main class="container my-3 py-2" style="min-height: 110vh;">
     <div class="card mt-1">
         <div class="text-center mt-4">
             <img src="../../../assets/images/logos/user-profile.png" class="img-fluid" style="width: 50%; height: auto;">
-            <h4 class="my-3">Nombre del Usuario</h4>
+            <h4 class="my-3">{{clienteActual.nombre}} {{clienteActual.apellido}}</h4>
         </div>
-        <div class="card-body" style="margin-top: 40px;">
+        <div class="card-body" style="margin-top: 30px;">
             <div class="profile-list-item">
-                <h5>Teléfono: </h5>
+                <h6>Teléfono: {{clienteActual.telefono}}</h6>
             </div>
             <div class="profile-list-item">
-              <h5>Correo: </h5>
+              <h6>Correo: {{clienteActual.correo}}</h6>
             </div>
             <div class="profile-list-item">
                 <h5>Cliente Bronce</h5>

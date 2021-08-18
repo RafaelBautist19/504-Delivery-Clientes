@@ -8,9 +8,20 @@ import { ClientesService } from 'src/app/services/clientes.service';
 })
 export class PerfilComponent implements OnInit {
 
+  cliente:any=localStorage.getItem('clientID');
+  clienteActual:any;
+
   constructor(public clientesService:ClientesService) { }
 
   ngOnInit(): void {
+    this.clientesService.informacionCliente(this.cliente).subscribe(
+      res=>{
+        this.clienteActual=res;
+      },
+      error=>{
+        console.log(error)
+      }
+    )
   }
 
 

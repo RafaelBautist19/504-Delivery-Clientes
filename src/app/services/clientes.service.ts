@@ -19,6 +19,10 @@ export class ClientesService {
     return this.http.post(`${this.URLClientes}/signup`, cliente);
   }
 
+  informacionCliente(cliente:any){
+    return this.http.get(`${this.URLClientes}/${cliente}`, {});
+  }
+
   loggedIn():Boolean{
     if (localStorage.getItem('token')){
       return true
