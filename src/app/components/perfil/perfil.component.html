@@ -12,8 +12,10 @@
               <h6>Correo: {{clienteActual.correo}}</h6>
             </div>
             <div class="profile-list-item">
-                <h5>Cliente Bronce</h5>
-                <h6>30 Pedidos Realizados</h6>
+                <h5 *ngIf="pedidosCliente.length < 30">Cliente Bronce</h5>
+                <h5 *ngIf="pedidosCliente.length < 60 && pedidosCliente.length >= 30">Cliente Plata</h5>
+                <h5 *ngIf="pedidosCliente.length < 90 && pedidosCliente.length >= 60">Cliente Plata</h5>
+                <h6>{{pedidosCliente.length}} Pedidos Realizados</h6>
             </div>
             <div class="text-center mt-3">
               <button class="btn btn-primary btn-lg" (click)="clientesService.logOut()">Cerrar Sesion</button>

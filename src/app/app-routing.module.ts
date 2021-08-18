@@ -12,6 +12,7 @@ import { MenuRestauranteComponent } from './components/menu-restaurante/menu-res
 import { InformacionProductoComponent } from './components/informacion-producto/informacion-producto.component';
 import { DireccionEntregaComponent } from './components/direccion-entrega/direccion-entrega.component';
 import { AuthGuard } from './auth.guard';
+import { DetallePedidoComponent } from './components/detalle-pedido/detalle-pedido.component';
 
 const routes: Routes = [
   { path:'', component: LandingComponent},
@@ -23,7 +24,8 @@ const routes: Routes = [
   { path:'perfil', component:PerfilComponent, canActivate:[AuthGuard]},
   { path:'home/:idRestaurante', component:MenuRestauranteComponent, canActivate:[AuthGuard]},
   { path: 'home/:idRestaurante/infoproducto/:idProducto', component:InformacionProductoComponent, canActivate:[AuthGuard]},
-  { path: 'carrito/realizar-pedido', component: DireccionEntregaComponent, canActivate:[AuthGuard]}
+  { path: 'carrito/realizar-pedido', component: DireccionEntregaComponent, canActivate:[AuthGuard]},
+  { path: 'pedidos/:idPedido', component: DetallePedidoComponent, canActivate:[AuthGuard]}
 ]
 
 

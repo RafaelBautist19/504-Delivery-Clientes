@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Loader } from '@googlemaps/js-api-loader';
 import { ClientesService } from 'src/app/services/clientes.service';
+import { PedidosService } from 'src/app/services/pedidos.service';
 
 
 @Component({
@@ -25,7 +27,8 @@ export class DireccionEntregaComponent implements OnInit {
   envio:number = 30;
   monto:number = 0;
 
-  constructor(private clientesService:ClientesService){}
+
+  constructor(private clientesService:ClientesService, private pedidosService:PedidosService, private router:Router){}
 
   opcionSeleccionada:string = '';
   
@@ -85,6 +88,10 @@ export class DireccionEntregaComponent implements OnInit {
     if(this.opcionSeleccionada === ''){
       alert('Seleccione un metodo de Pago');
     }
+
+    if(this.ubicacionEntrega.lat === 0 && this.ubicacionEntrega.lng === 0){
+      alert('Su ubicacion no ha sido detectada correctamente, por favor, recargar su pagina');
+    }
     
     var clientePedido={
       nombreCliente: `${this.cliente.nombre} ${this.cliente.apellido}`,
@@ -98,6 +105,29 @@ export class DireccionEntregaComponent implements OnInit {
     console.log('Cliente:', clientePedido);
     console.log('Envio:', this.envio);
     console.log('Monto:', this.envio + (this.producto.precio * this.producto.cantidad));
+
+    var informacionPedido={
+        cliente: clientePedido,
+        motorista: [],
+        metodoPago: this.opcionSeleccionada,
+        producto: this.producto,
+        direccion: this.ubicacionEntrega,
+        envio: this.envio,
+        monto: (this.envio + (this.producto.precio * this.producto.cantidad))
+    }
+
+    this.pedidosService.nuevoPedido(informacionPedido).subscribe(
+      res=>{
+        alert('Pedido realizado exitosamente');
+        this.router.navigate(['/pedidos']);
+        localStorage.removeItem('productos');
+      },
+      error=>{
+        console.log(error);
+      }
+    )
+
+
 
   }
 

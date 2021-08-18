@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PedidosService } from 'src/app/services/pedidos.service';
 
 @Component({
   selector: 'app-pedidos',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PedidosComponent implements OnInit {
 
-  constructor() { }
+  clienteActual:any=localStorage.getItem('clientID');
+  pedidos:any=[];
+
+  constructor(private pedidosService:PedidosService) { }
 
   ngOnInit(): void {
+    this.pedidosService.verPedidos(this.clienteActual).subscribe(
+      res=>{
+        this.pedidos=res;
+      },
+      error=>{
+        console.log(error);
+      }
+    )
   }
 
 }

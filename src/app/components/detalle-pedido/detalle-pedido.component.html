@@ -1,1 +1,29 @@
-<p>detalle-pedido works!</p>
+<app-navbar></app-navbar>
+
+<main class="container mt-3">
+    <div class="card my-2">
+        <div class="row no-gutters">
+            <div class="col-4 align-self-center">
+                <img src="../../../assets/images/{{informacionPedido.producto.imagenProducto}}" class="img-fluid px-2 py-2" alt="">
+            </div>
+            <div class="col-7">
+                <h5 class="mt-2">{{informacionPedido.producto.nombreProducto}}</h5>
+                <h6 class="mb-0">{{informacionPedido.producto.nombreRestaurante}}</h6>
+                <h6 class="mb-0">Cantidad: {{informacionPedido.producto.cantidad}}</h6>
+                <h6 class="mb-0">Monto: {{informacionPedido.cantidad}}</h6>               
+            </div>
+        </div>
+    </div>
+
+    <div class="card my-2">
+        <div class="ml-3 my-2">
+            <h5 class="mt-2" *ngIf="informacionPedido.motorista.nombreMotorista === ''">Motorista: Sin Asignar</h5>
+            <h5 class="mt-2" *ngIf="informacionPedido.motorista.nombreMotorista !== ''">Motorista: {{informacionPedido.motorista.nombreMotorista}}</h5>
+            <h6 class="mb-0" *ngIf="informacionPedido.motorista.telefono === ''">Telefono: No Disponible</h6>
+            <h6 class="mt-2" *ngIf="informacionPedido.motorista.telefono !== ''">Telefono: {{informacionPedido.motorista.telefono}}</h6>
+            <h6 class="mb-0">Metodo de Pago: {{informacionPedido.metodoPago}}</h6>
+            <h6 class="mb-0">Estado: {{informacionPedido.estado}}</h6>
+        </div>
+    </div>
+    
+</main>
