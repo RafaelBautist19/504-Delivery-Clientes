@@ -13,6 +13,9 @@ export class DireccionEntregaComponent implements OnInit {
   lat:number = 0;
   lng:number = 0;
 
+  ubicacionEntrega:any;
+
+  opcionSeleccionada:string = '';
   
   getClientLocation(){
     if(navigator.geolocation){
@@ -38,6 +41,8 @@ export class DireccionEntregaComponent implements OnInit {
 
       var location = { lat: this.lat, lng: this.lng }
 
+      this.ubicacionEntrega = location;
+
       this.map = new google.maps.Map(document.getElementById("map")!, {
         center: location,
         zoom: 18
@@ -52,5 +57,11 @@ export class DireccionEntregaComponent implements OnInit {
     })
   }
 
+  realizarPedido(){
+    if(this.opcionSeleccionada === ''){
+      alert('Seleccione un metodo de Pago');
+    }
+    console.log(this.opcionSeleccionada, this.ubicacionEntrega);
+  }
 
 }

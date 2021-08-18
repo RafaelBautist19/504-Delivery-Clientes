@@ -21,4 +21,8 @@ export class RestaurantesService {
     return this.http.get(`http://localhost:8888/restaurantes/${restaurante}/menu/${producto}`,{});
   }
 
+  obtenerInfoRestaurante(restaurante:any):Observable<any>{
+    return this.http.get(`http://localhost:8888/restaurantes/${restaurante}`,{});
+  }
+
 }

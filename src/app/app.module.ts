@@ -18,7 +18,6 @@ import { PerfilComponent } from './components/perfil/perfil.component';
 import { MenuRestauranteComponent } from './components/menu-restaurante/menu-restaurante.component';
 import { InformacionProductoComponent } from './components/informacion-producto/informacion-producto.component';
 import { DireccionEntregaComponent } from './components/direccion-entrega/direccion-entrega.component';
-import { MetodoPagoComponent } from './components/metodo-pago/metodo-pago.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { DetallePedidoComponent } from './components/detalle-pedido/detalle-pedido.component';
@@ -42,7 +41,6 @@ import { TokenInterceptorService } from './services/token-interceptor.service';
     MenuRestauranteComponent,
     InformacionProductoComponent,
     DireccionEntregaComponent,
-    MetodoPagoComponent,
     DetallePedidoComponent
   ],
   imports: [

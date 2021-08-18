@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { RestaurantesService } from 'src/app/services/restaurantes.service';
 
 @Component({
@@ -15,14 +14,13 @@ export class InformacionProductoComponent implements OnInit {
   idRestaurante:any;
   nombreProducto:any; 
   descripcion:any;
-  productoElegido:any;
   imagenProducto:any;
+  nombreRestaurante:any;
+  cantidad:number=1;
   
-  agregarProductoCarrito = new FormGroup({
+  producto:any={};
 
-  });
-
-  constructor(private restaurantesService:RestaurantesService, private rutaActiva: ActivatedRoute) { }
+  constructor(private restaurantesService:RestaurantesService, private rutaActiva: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.idProducto = this.rutaActiva.snapshot.params.idProducto;
@@ -38,7 +36,29 @@ export class InformacionProductoComponent implements OnInit {
       error=>{
         console.log(error);
       }
+    );
+
+    this.restaurantesService.obtenerInfoRestaurante(this.idRestaurante).subscribe(
+      res=>{
+        this.nombreRestaurante = res.nombreRestaurante;
+      },
+      error=>{
+        console.log(error);
+      }
     )
+
+  }
+
+  agregarProducto(){
+    this.producto={
+      nombreProducto: this.nombreProducto,
+      precio: this.precio,
+      nombreRestaurante: this.nombreRestaurante,
+      cantidad: this.cantidad,
+      imagenProducto: this.imagenProducto
+    }
+    localStorage.setItem('productos', JSON.stringify(this.producto));
+    this.router.navigate(['/carrito']);
   }
 
 }

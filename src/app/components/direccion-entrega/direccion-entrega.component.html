@@ -7,10 +7,16 @@
         <span class="text-sm">La entrega se realizara en la siguiente dirección basandonos en su ubicación</span>
     </div>
     
-    <app-metodo-pago></app-metodo-pago>
+    <main class="container my-3">
+        <select class="form-control" [(ngModel)]="opcionSeleccionada" name="opcionSeleccionada">
+            <option value=''>Seleccione su método de Pago</option>
+            <option value="tarjeta">Tarjeta contra entrega</option>
+            <option value="efectivo">Efectivo</option>
+        </select>
+    </main>
 
     <div class="text-center">
-        <button class="btn btn-primary">Realizar Pedido</button>
+        <button class="btn btn-primary" (click)="realizarPedido()">Realizar Pedido</button>
     </div>
     
 </main>

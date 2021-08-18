@@ -16,11 +16,11 @@
             </div>
         </div>
     </div>
-    <form class="mx-3 my-4" [formGroup]="agregarProductoCarrito">
+    <form class="mx-3 my-4">
         <label for="">Cantidad:</label>
-        <input type="number" min="1" class="form-control" style="width: 40%;">
+        <input type="number" min="1" class="form-control" [(ngModel)]="cantidad" name="cantidad" id="cantidad" style="width: 40%;">
     </form>
     <div class="text-center">
-        <button class="btn btn-primary" style="margin: 0 auto;">Añadir Producto</button>
+        <button class="btn btn-primary" style="margin: 0 auto;" (click)="agregarProducto()">Añadir Producto</button>
     </div>
 </main>

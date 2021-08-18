@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarritoComponent implements OnInit {
 
+  producto:any=null;
+
+  
   constructor() { }
 
   ngOnInit(): void {
+    this.producto=JSON.parse(localStorage.getItem('productos')!);
+    //console.log(this.productos.nombreProducto);
   }
 
 }
