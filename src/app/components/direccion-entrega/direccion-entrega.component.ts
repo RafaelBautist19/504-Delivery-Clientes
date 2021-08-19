@@ -90,7 +90,7 @@ export class DireccionEntregaComponent implements OnInit {
     }
 
     if(this.ubicacionEntrega.lat === 0 && this.ubicacionEntrega.lng === 0){
-      alert('Su ubicacion no ha sido detectada correctamente, por favor, recargar su pagina');
+      alert('Su ubicacion no ha sido detectada correctamente, por favor, recargue su pagina');
     }
     
     var clientePedido={
