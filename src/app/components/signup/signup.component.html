@@ -13,12 +13,11 @@
                         <label class="my-1">Apellido:</label>
                         <input type="text" formControlName="apellido" class="form-control" placeholder="Apellido" required>
                         <label class="my-1">Correo Electronico:</label>
-                        <input type="email" formControlName="correo" class="form-control" placeholder="Correo" required>
+                        <input type="email" [ngClass]="{'input-error': correo.invalid && (correo.dirty || correo.touched)}" formControlName="correo" class="form-control" placeholder="Correo" required>
+                        <label for=""><small class="d-none" [ngClass]="{'d-block': correo.invalid && (correo.dirty || correo.touched), 'd-none': correo.valid}">El Correo Electronico no es valido</small></label><br>
                         <label class="my-1">Contraseña:</label>
-                        <input type="password" formControlName="password" class="form-control" placeholder="Contraseña" required>
-                        <label clas><small>La contraseña debe ser de minimo 8 caracteres</small></label> <br>
-                        <!-- <label class="my-1">Repetir Contraseña:</label>
-                        <input type="password" class="form-control" placeholder="Volver a introducir contraseña"> -->
+                        <input type="password" formControlName="password" [ngClass]="{'input-error': password.invalid && (password.dirty || password.touched)}" class="form-control" placeholder="Contraseña" required>
+                        <label><small [ngClass]="{'d-block': password.invalid && (password.dirty || password.touched), 'd-none': password.valid}">La contraseña debe ser de minimo 8 caracteres</small></label> <br>
                         <label class="my-1" >Genero:</label>
                         <div class="form-check">
                             <input class="form-check-input" formControlName="genero" value="Masculino" type="radio" name="genero" id="genero">
@@ -35,7 +34,8 @@
                         <label class="my-1">Fecha de Nacimiento:</label>
                         <input type="date" class="form-control" formControlName="fechaNacimiento" required>
                         <label class="my-1">Teléfono:</label>
-                        <input type="text" class="form-control" formControlName="telefono" placeholder="XXXX-XXXX" pattern="[0-9]{4}-[0-9]{4}" required>
+                        <input type="text" class="form-control" [ngClass]="{'input-error': telefono.invalid && (telefono.dirty || telefono.touched)}" formControlName="telefono" placeholder="XXXX-XXXX" pattern="[0-9]{4}-[0-9]{4}" required>
+                        <label><small [ngClass]="{'d-block': telefono.invalid && (telefono.dirty || telefono.touched), 'd-none': telefono.valid}">Utilizar el formato mostrado XXXX-XXXX</small></label>
                     </form>
                     <span style="margin: 0 auto; font-size: 0.8rem;">¿Ya tiene una cuenta? <a routerLink='/login'>Inicia Sesión Ahora!</a></span>
                     <button class="btn btn-primary my-4" (click)="guardarNuevoCliente()" style="width: 80%; margin: 0 auto;">Registrarse</button>

@@ -15,7 +15,7 @@ export class SignupComponent implements OnInit {
   formularioRegistro = new FormGroup({
     nombre: new FormControl('', [Validators.required]),
     apellido: new FormControl('', [Validators.required]),
-    correo: new FormControl('', [Validators.required]),
+    correo: new FormControl('', [Validators.required, Validators.pattern(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)]),
     password: new FormControl('', [Validators.required, Validators.minLength(8)]),
     genero: new FormControl('', [Validators.required]),
     fechaNacimiento: new FormControl('', [Validators.required]),
@@ -26,6 +26,18 @@ export class SignupComponent implements OnInit {
 
   ngOnInit(): void {
     this.title.setTitle('504 Delivery - Registro');
+  }
+
+  get correo(){
+    return this.formularioRegistro.get('correo') as FormControl;
+  }
+
+  get password(){
+    return this.formularioRegistro.get('password') as FormControl;
+  }
+
+  get telefono(){
+    return this.formularioRegistro.get('telefono') as FormControl;
   }
 
   guardarNuevoCliente(){

@@ -22,3 +22,8 @@ input{
 label{
     margin-left: 10%;
 }
+
+
+small{
+    color:red
+}
