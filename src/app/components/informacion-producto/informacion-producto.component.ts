@@ -28,7 +28,7 @@ export class InformacionProductoComponent implements OnInit {
     
     this.restaurantesService.obtenerInfoProducto(this.idRestaurante, this.idProducto).subscribe(
       res=>{
-        this.precio = res.impuesto + res.menu[0].precio;
+        this.precio = (res.impuesto + res.menu[0].precio);
         this.nombreProducto = res.menu[0].nombreProducto;
         this.descripcion = res.menu[0].descripcion;
         this.imagenProducto = res.menu[0].imagenProducto;

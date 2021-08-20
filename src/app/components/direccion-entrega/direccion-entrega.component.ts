@@ -85,26 +85,13 @@ export class DireccionEntregaComponent implements OnInit {
   }
 
   realizarPedido(){
-    if(this.opcionSeleccionada === ''){
-      alert('Seleccione un metodo de Pago');
-    }
 
-    if(this.ubicacionEntrega.lat === 0 && this.ubicacionEntrega.lng === 0){
-      alert('Su ubicacion no ha sido detectada correctamente, por favor, recargue su pagina');
-    }
-    
+
     var clientePedido={
       nombreCliente: `${this.cliente.nombre} ${this.cliente.apellido}`,
       telefono: this.cliente.telefono,
       idCliente: this.cliente._id
     }
-    
-    console.log('Metodo de Pago:', this.opcionSeleccionada);
-    console.log('Direccion:', this.ubicacionEntrega);
-    console.log('Producto:', this.producto);
-    console.log('Cliente:', clientePedido);
-    console.log('Envio:', this.envio);
-    console.log('Monto:', this.envio + (this.producto.precio * this.producto.cantidad));
 
     var informacionPedido={
         cliente: clientePedido,
@@ -116,16 +103,32 @@ export class DireccionEntregaComponent implements OnInit {
         monto: (this.envio + (this.producto.precio * this.producto.cantidad))
     }
 
-    this.pedidosService.nuevoPedido(informacionPedido).subscribe(
-      res=>{
-        alert('Pedido realizado exitosamente');
-        this.router.navigate(['/pedidos']);
-        localStorage.removeItem('productos');
-      },
-      error=>{
-        console.log(error);
-      }
-    )
+    if(this.opcionSeleccionada === '' ){
+      alert('Seleccione un metodo de Pago');
+    }
+    else if(this.ubicacionEntrega.lat === 0 && this.ubicacionEntrega.lng===0){
+      alert('Su ubicacion no se ha detectado correctamente, por favor, recargar la pagina');
+    }
+    else{
+      this.pedidosService.nuevoPedido(informacionPedido).subscribe(
+        res=>{
+          alert('Pedido realizado exitosamente');
+          this.router.navigate(['/pedidos']);
+          localStorage.removeItem('productos');
+        },
+        error=>{
+          console.log(error);
+        }
+      )
+    }
+
+
+    // if(this.ubicacionEntrega.lat === 0 && this.ubicacionEntrega.lng === 0){
+    //   alert('Su ubicacion no ha sido detectada correctamente, por favor, recargue su pagina');
+    // }
+    
+
+    
 
 
 
