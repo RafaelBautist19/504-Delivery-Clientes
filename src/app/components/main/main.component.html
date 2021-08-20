@@ -10,7 +10,7 @@
     <div class="row">
         <div class="col-6 my-2" *ngFor="let restaurante of restaurantes">
             <div class="card">
-                <img src="../../../assets/images/{{restaurante.icono}}" class="card-img-top mt-3" alt="...">
+                <img src="http://localhost:8888/images/{{restaurante.icono}}" class="card-img-top mt-3" alt="...">
                 <div class="card-body text-center">
                   <h5 class="card-title">{{restaurante.nombreRestaurante}}</h5>
                   <a routerLink='{{restaurante._id}}' class="btn btn-primary">Ver Menú</a>
