@@ -1,0 +1,115 @@
+{
+  "configVersion": 1,
+  "timestamp": 1629614783704,
+  "index": "./index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "./favicon.ico",
+        "./index.html",
+        "./main-es2017.0e6dfda4712c85e262a0.js",
+        "./main-es5.0e6dfda4712c85e262a0.js",
+        "./manifest.webmanifest",
+        "./polyfills-es2017.ee59fb00d8fed6869b73.js",
+        "./polyfills-es5.0d51cab84b632b1a7d3b.js",
+        "./runtime-es2017.67343748125af9667818.js",
+        "./runtime-es5.67343748125af9667818.js",
+        "./styles.e0399a9a94ca14910cb1.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "./assets/icons/icon-128x128.png",
+        "./assets/icons/icon-192x192.png",
+        "./assets/icons/icon-384x384.png",
+        "./assets/icons/icon-48x48.png",
+        "./assets/icons/icon-512x512.png",
+        "./assets/icons/icon-72x72.png",
+        "./assets/icons/icon-96x96.png",
+        "./assets/icons/icon.png",
+        "./assets/images/logos/504 deliver.jpg",
+        "./assets/images/logos/In no time-rafiki.svg",
+        "./assets/images/logos/Logo-Oficial.png",
+        "./assets/images/logos/Logo-Outline-White.png",
+        "./assets/images/logos/Logo-Outline.png",
+        "./assets/images/logos/buy.svg",
+        "./assets/images/logos/cart.svg",
+        "./assets/images/logos/home.svg",
+        "./assets/images/logos/recive.svg",
+        "./assets/images/logos/send.svg",
+        "./assets/images/logos/trabajo.jpg",
+        "./assets/images/logos/user-profile.png",
+        "./assets/images/logos/usuario.svg",
+        "./trabajo.e761bd278df280cebd8e.jpg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "./assets/icons/icon-128x128.png": "66d1d177afe0e5cf1fab11b855ee859a75113052",
+    "./assets/icons/icon-192x192.png": "ce3fc163e9ab52b2495e7876f55172de409e466d",
+    "./assets/icons/icon-384x384.png": "ca5c25e717328bf007e38c3948b71b59495359ce",
+    "./assets/icons/icon-48x48.png": "534807809e37906228b6ff6f6c0ddf34e290e47a",
+    "./assets/icons/icon-512x512.png": "fc536407ff3c3a093bff83859f98cac4e9befd32",
+    "./assets/icons/icon-72x72.png": "457d3712f5704795051c117b8384abc493c2130b",
+    "./assets/icons/icon-96x96.png": "9558e6d445809384e12db97ea2dd3b83f3d9fd25",
+    "./assets/icons/icon.png": "75c0abf911863117d78d824c2791c54ecf18d24f",
+    "./assets/images/logos/504 deliver.jpg": "c18cb37e377a52f35b4325ff02f8d764dcaa835a",
+    "./assets/images/logos/In no time-rafiki.svg": "ffdd3d7b013fc45f90d08831020db262a7045d12",
+    "./assets/images/logos/Logo-Oficial.png": "ead1bd2864da6d149f0d567c1b8005e3fe59150c",
+    "./assets/images/logos/Logo-Outline-White.png": "bdd20fef2de0ab230edf6431085c4ad4942b61c7",
+    "./assets/images/logos/Logo-Outline.png": "f12fe6b7ae27f73b338e9266cd292bb774d31852",
+    "./assets/images/logos/buy.svg": "6fed469e717703b56fdb77ae7bf9c91f92c7b147",
+    "./assets/images/logos/cart.svg": "d193702e8d7a3fbb02582672be0beedda4cf1b18",
+    "./assets/images/logos/home.svg": "20c7ec70cca4f6d25ff29211ea24f378eb874c0e",
+    "./assets/images/logos/recive.svg": "fedf38ed02925d0d145a55c7abe018282cc69c7e",
+    "./assets/images/logos/send.svg": "836de9f362fdb37c557ebb15a6fe0302db019a7d",
+    "./assets/images/logos/trabajo.jpg": "c4ead2e0fe1e9d280f522be318f2cc80ad3a5430",
+    "./assets/images/logos/user-profile.png": "0cc666baabdb04ff5dc32c61e1eef377b3030ac2",
+    "./assets/images/logos/usuario.svg": "12763c34d5fb03d407c1a008257d4a46ed731961",
+    "./favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "./index.html": "cdbdca82613bc9856d80cc9fd06c463feb87c72b",
+    "./main-es2017.0e6dfda4712c85e262a0.js": "6e04b4fe9c1e6ecd5e7f69c46892e941a887d6c7",
+    "./main-es5.0e6dfda4712c85e262a0.js": "7545bcc62ffd1466f94da5f5c9738cdfd29c10e9",
+    "./manifest.webmanifest": "66db1bed34012ce5d8786b65d6ad256b08290577",
+    "./polyfills-es2017.ee59fb00d8fed6869b73.js": "fa3e7fa7c300fd13996e8e9274df3f47c704f43c",
+    "./polyfills-es5.0d51cab84b632b1a7d3b.js": "4cc98451be35a260f5becf63e6c3250d249d99e6",
+    "./runtime-es2017.67343748125af9667818.js": "5f7d0eee1482a08df986ddae2c07a9a6c6aa3811",
+    "./runtime-es5.67343748125af9667818.js": "5f7d0eee1482a08df986ddae2c07a9a6c6aa3811",
+    "./styles.e0399a9a94ca14910cb1.css": "756ed7123d0a82404ffb51b4ce4e9f8e7359b86b",
+    "./trabajo.e761bd278df280cebd8e.jpg": "c4ead2e0fe1e9d280f522be318f2cc80ad3a5430"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
